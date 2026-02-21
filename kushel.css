@@ -42,7 +42,9 @@ nav li img {
   justify-content: space-between;
   align-items: center;
   padding: 70px 10%;
-  min-width: 100vh;
+  /* min-width: 100vh; */
+    min-height: 100vh;
+
 }
 
 /* LEFT SIDE */
@@ -312,12 +314,14 @@ h3 {
   font-size: 30px;
   font-weight: lighter;
 }
+ 
 .services {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;   
+  align-items: stretch;      
+  gap: 30px;                 
   padding: 70px 10%;
-  min-width: 100vh;
+  flex-wrap: wrap;
 }
 .services h3 {
   color: #599fea;
@@ -328,11 +332,16 @@ h3 {
   font-weight: lighter;
   padding: 10px;
 }
-.services .box1 {
-  width: 360px;
-  height: 540px;
+.services .box1,
+.services .box2,
+.services .box3 {
+  flex: 1;             
+  max-width: 360px;     
   border: 1px solid #6e3c3cad;
+  display: flex;
+  flex-direction: column;
 }
+
 .box1 img {
   width: 130px;
   margin: 10px;
@@ -347,11 +356,7 @@ h3 {
   cursor: pointer;
 }
 
-.services .box2 {
-  width: 360px;
-  height: 540px;
-  border: 1px solid #6e3c3cad;
-}
+
 .desc2 {
   padding: 10px;
 }
@@ -359,11 +364,7 @@ h3 {
   width: 130px;
   margin: 10px;
 }
-.services .box3 {
-  width: 360px;
-  height: 540px;
-  border: 1px solid #6e3c3cad;
-}
+
 .box3 img {
   width: 100px;
   margin: 5px;
@@ -381,6 +382,7 @@ h3 {
   padding: 15px 40px;
   border: none;
   font-size: 18px;
+  margin-top: auto;
 }
 
 /* Section4 CSS */
@@ -1091,4 +1093,54 @@ textarea{
   .container{
     flex-direction:column;
   }
+}
+
+@media (max-width: 768px) {
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sec1 {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .services,
+  .services-section3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .right-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sec8-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sec8-left {
+    width: 100%;
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
 }
